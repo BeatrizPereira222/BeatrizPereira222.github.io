@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beatriz Pereira · Astrophysics</title>
+  <meta name="description" content="Beatriz Pereira, physicist and astrophysicist. My work, research explained in plain language, and physics from the basics to advanced topics.">
+  <meta name="theme-color" content="#05060a">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400;1,500&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- ───────── Top menu ───────── -->
+  <header class="topbar" id="topbar">
+    <a href="#home" class="brand" aria-label="Back to top">
+      <span class="brand-mark brand-orbit" aria-hidden="true"><span></span></span>
+      <span class="brand-name">Beatriz Pereira</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span class="sr-only">Menu</span>
+    </button>
+    <nav id="nav" class="nav">
+      <a href="#work" data-section="work">My work</a>
+      <a href="#research" data-section="research">Research explained</a>
+      <a href="#physics" data-section="physics">Physics</a>
+      <a href="#lab" data-section="lab">Sky Lab</a>
+      <a href="#contact" class="nav-cta" data-section="contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ───────── Hero ───────── -->
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <p class="eyebrow mono">Physicist · Astrophysics PhD · Science communicator</p>
+        <h1>Beatriz<br><em>Pereira</em></h1>
+        <p class="hero-sub">I study how light <span class="rotator" id="rotator">scatters</span> on its way to us, and I explain physics for anyone who looks up.</p>
+        <div class="hero-actions">
+          <a href="#work" class="btn">See my work</a>
+          <a href="#physics" class="btn btn-ghost">Start learning physics</a>
+        </div>
+      </div>
+
+      <!-- Portrait in orbit. Set "portrait" in data/site.json to your photo; until then the monogram shows. -->
+      <div class="portrait" aria-hidden="true">
+        <div class="orbit o1"><i class="planet gold"></i></div>
+        <div class="orbit o2"><i class="planet blue"></i><i class="planet small"></i></div>
+        <div class="orbit o3"><i class="planet violet"></i></div>
+        <div class="portrait-disc" id="portraitDisc">
+          <img class="portrait-mono" src="assets/img/logo.png" alt="">
+        </div>
+        <span class="spark s1">✦</span><span class="spark s2">✦</span><span class="spark s3">✧</span>
+        <span class="spark s4">✦</span><span class="spark s5">·</span><span class="spark s6">✧</span>
+      </div>
+
+      <a href="#work" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- ───────── 01 · Me & my work ───────── -->
+    <section id="work" class="section">
+      <header class="section-head reveal">
+        <span class="mono idx">01</span>
+        <h2>Me &amp; my work</h2>
+        <p class="lede">Where I've been, what I'm doing now, and what comes next.</p>
+      </header>
+
+      <div class="bio reveal">
+        <p class="bio-lead">Physicist pursuing a PhD, with resilience and knowledge tending to infinity. I research the polarisation of light, write code to understand data, and teach physics so it feels less distant.</p>
+        <div class="cards three">
+          <article class="card">
+            <span class="card-ico" aria-hidden="true">◎</span>
+            <h3>Research</h3>
+            <p>Polarimetric observations, scattering processes and moonlight polarisation. Before that, quantum key distribution and exoplanet habitability.</p>
+            <ul class="tags"><li>Polarimetry</li><li>Scattering</li><li>Exoplanets</li></ul>
+          </article>
+          <article class="card">
+            <span class="card-ico" aria-hidden="true">⌬</span>
+            <h3>Software</h3>
+            <p>From CENTRA to Entangled Space: data handling, visualisation and apps. Python is my favourite tool, with Astropy, Pandas, Pypogs and SciPy.</p>
+            <ul class="tags"><li>Python</li><li>Astropy</li><li>Pandas</li><li>SciPy</li></ul>
+          </article>
+          <article class="card">
+            <span class="card-ico" aria-hidden="true">☾</span>
+            <h3>Teaching</h3>
+            <p>Years of teaching physics and mathematics, and educational resources that simplify hard ideas and leave room for curiosity.</p>
+            <ul class="tags"><li>Physics</li><li>Mathematics</li><li>Outreach</li></ul>
+          </article>
+        </div>
+      </div>
+
+      <div class="sub-head reveal">
+        <h3>Timeline</h3>
+        <div class="legend-pills mono" aria-hidden="true">
+          <span><i class="dot done"></i>Done</span><span><i class="dot now"></i>Now</span><span><i class="dot next"></i>Planned</span>
+        </div>
+      </div>
+      <div class="chrono" id="timeline"><p class="muted">Loading timeline…</p></div>
+
+      <div class="sub-head reveal"><h3>Projects</h3></div>
+      <div class="cards two" id="projectList"><p class="muted">Loading projects…</p></div>
+    </section>
+
+    <!-- ───────── 02 · Research explained ───────── -->
+    <section id="research" class="section">
+      <header class="section-head reveal">
+        <span class="mono idx">02</span>
+        <h2>Research explained</h2>
+        <p class="lede">The topics I work on, taught from the ground up, and overviews of the papers behind them.</p>
+      </header>
+      <div class="filters" id="researchFilters" role="tablist" aria-label="Filter by type"></div>
+      <div class="notes" id="researchList"><p class="muted">Loading…</p></div>
+    </section>
+
+    <!-- ───────── Sky Lab (interactive) ───────── -->
+    <section id="lab" class="section">
+      <header class="section-head reveal">
+        <span class="mono idx">03</span>
+        <h2>Sky Lab</h2>
+        <p class="lede">My research, in your hands. The sky is polarised: move the Sun (or the Moon) and watch the pattern follow it.</p>
+      </header>
+
+      <div class="lab reveal">
+        <div class="lab-view">
+          <canvas id="polSky" width="560" height="560" aria-label="All-sky map of the degree of polarisation"></canvas>
+          <div class="compass mono" aria-hidden="true"><span class="n">N</span><span class="e">E</span><span class="s">S</span><span class="w">W</span></div>
+        </div>
+        <div class="lab-panel">
+          <div class="seg" role="radiogroup" aria-label="Light source">
+            <button class="on" data-src="sun" role="radio" aria-checked="true">☀ Sunlight</button>
+            <button data-src="moon" role="radio" aria-checked="false">☾ Moonlight</button>
+          </div>
+          <label class="ctl">
+            <span>Elevation <output id="altOut" class="mono">20°</output></span>
+            <input type="range" id="alt" min="-10" max="90" value="20">
+          </label>
+          <label class="ctl">
+            <span>Azimuth <output id="azOut" class="mono">250°</output></span>
+            <input type="range" id="az" min="0" max="359" value="250">
+          </label>
+          <label class="ctl">
+            <span>Max. polarisation <output id="pmaxOut" class="mono">75%</output></span>
+            <input type="range" id="pmax" min="10" max="100" value="75">
+          </label>
+          <label class="check"><input type="checkbox" id="vectors" checked> Show E-vector directions</label>
+          <div class="legend" aria-hidden="true"><span class="mono">0%</span><i></i><span class="mono" id="legendMax">100%</span></div>
+          <p class="readout mono" id="polReadout">Hover the sky to read values</p>
+          <details class="explain">
+            <summary>What am I looking at?</summary>
+            <p>This is a fisheye view of the whole sky with the zenith at the centre and the horizon at the rim. Rayleigh scattering polarises light most strongly <strong>90° away from the light source</strong>, which makes the bright band. The small lines show the direction the electric field vibrates. Bees and some birds use this pattern to navigate.</p>
+            <p>The model uses single scattering, <span class="mono">P = P<sub>max</sub>·sin²γ / (1 + cos²γ)</span>. The real sky also has multiple scattering and aerosols, which lower the peak and add neutral points (Arago, Babinet, Brewster). Measuring those differences is part of my research.</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="moon-card reveal" id="moonCard">
+        <canvas id="moonCanvas" width="220" height="220" aria-hidden="true"></canvas>
+        <div>
+          <p class="eyebrow mono">Tonight's Moon</p>
+          <h3 id="moonPhase">—</h3>
+          <dl class="moon-stats mono">
+            <div><dt>Illuminated</dt><dd id="moonIllum">—</dd></div>
+            <div><dt>Age</dt><dd id="moonAge">—</dd></div>
+            <div><dt>Next full moon</dt><dd id="moonFull">—</dd></div>
+          </dl>
+          <p class="muted small">Calculated live in your browser from the mean synodic month (29.53 days). Around full moon, moonlight is bright enough to map the polarised night sky.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ───────── 04 · Physics book ───────── -->
+    <section id="physics" class="section">
+      <header class="section-head reveal">
+        <span class="mono idx">04</span>
+        <h2>Physics, step by step</h2>
+        <p class="lede" id="bookLede">From the basics to the demanding topics, with exercises, graphs and animations. This is the book I'm writing, one chapter at a time.</p>
+      </header>
+      <div class="book" id="book"><p class="muted">Loading chapters…</p></div>
+    </section>
+
+    <!-- ───────── Contact ───────── -->
+    <section id="contact" class="section contact">
+      <header class="section-head reveal">
+        <span class="mono idx">05</span>
+        <h2>Let's collaborate</h2>
+        <p class="lede">Consulting, writing, coding or teaching: tell me about your project and we'll work out how I can help.</p>
+      </header>
+      <div class="contact-links reveal" id="contactLinks"></div>
+      <aside class="patron reveal">
+        <p><strong>Join my Patreon</strong> for exclusive content, stories, behind-the-scenes notes, early releases and special perks.</p>
+        <a class="btn" id="patreonLink" href="#" target="_blank" rel="noopener">Become a patron</a>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer mono">
+    <span>© <span id="year"></span> Beatriz Pereira</span>
+    <span>Built with stardust and JavaScript · <a href="#home">Back to top ↑</a></span>
+  </footer>
+
+  <script src="assets/js/starfield.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/polarization.js"></script>
+  <script src="assets/js/moon.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

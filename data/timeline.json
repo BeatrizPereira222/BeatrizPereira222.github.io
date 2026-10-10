@@ -1,0 +1,17 @@
+[
+  { "status": "done", "when": "YYYY", "title": "Physics degree", "where": "University — replace", "text": "Replace with your degree, university and the topic of your thesis." },
+  { "status": "done", "when": "YYYY", "title": "Quantum key distribution", "where": "Research project", "text": "Sharing encryption keys with single photons and quantum mechanics." },
+  { "status": "done", "when": "YYYY", "title": "Exoplanets and astrobiology", "where": "Research project", "text": "Exoplanet habitability, detection methods and atmospheric characterisation." },
+  { "status": "done", "when": "YYYY", "title": "Software at CENTRA", "where": "CENTRA", "text": "Data handling and visualisation in Python." },
+  { "status": "done", "when": "YYYY", "title": "Software at Entangled Space", "where": "Entangled Space", "text": "App development and complex systems." },
+  { "status": "done", "when": "YYYY – now", "title": "Teaching physics and mathematics", "text": "Several years of classes, and the exercises that became the start of my book." },
+
+  { "status": "now", "when": "2026", "title": "PhD in polarimetry", "where": "Your university — replace", "text": "Polarimetric observations, scattering processes and moonlight polarisation.", "link": { "label": "Research explained", "url": "#research" } },
+  { "status": "now", "when": "Oct 2026", "title": "Sky polarisation article accepted", "text": "Accepted by the publisher. Publication coming soon." },
+  { "status": "now", "when": "2026", "title": "Writing Physics, step by step", "text": "A book from the basics to demanding topics, published here chapter by chapter.", "link": { "label": "Read the chapters", "url": "#physics" } },
+
+  { "status": "next", "when": "Q4 2026", "title": "Sky polarisation article published", "text": "Plus a plain-language overview of it on this site." },
+  { "status": "next", "when": "Q1 2027", "title": "Quiz App, first public version", "text": "Practice physics and maths with the exercises from the book." },
+  { "status": "next", "when": "2027", "title": "Book: Level 1 complete", "text": "All Foundations chapters online, with exercises and solutions." },
+  { "status": "next", "when": "Later", "title": "Type Ia supernovae", "text": "A research direction I hope to explore next." }
+]

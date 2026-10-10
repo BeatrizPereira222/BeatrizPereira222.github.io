@@ -1,0 +1,13 @@
+{
+  "name": "Beatriz Pereira",
+  "logo": "assets/img/logo.png",
+  "portrait": "",
+  "rotatorWords": ["scatters", "polarises", "reflects off the Moon", "crosses the atmosphere"],
+  "contact": [
+    { "label": "Email", "detail": "beatrizmspereira002@gmail.com", "url": "mailto:beatrizmspereira002@gmail.com", "icon": "✉" },
+    { "label": "LinkedIn", "detail": "/in/YOUR-PROFILE", "url": "https://www.linkedin.com/in/YOUR-PROFILE", "icon": "in" },
+    { "label": "GitHub", "detail": "@YOUR-USERNAME", "url": "https://github.com/YOUR-USERNAME", "icon": "⌥" },
+    { "label": "ORCID", "detail": "0000-0000-0000-0000", "url": "https://orcid.org/0000-0000-0000-0000", "icon": "iD" }
+  ],
+  "patreon": "https://www.patreon.com/YOUR-PAGE"
+}

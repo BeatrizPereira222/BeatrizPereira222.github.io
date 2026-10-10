@@ -1,0 +1,49 @@
+[
+  {
+    "title": "Article: Sky Polarisation",
+    "status": "ongoing",
+    "note": "Accepted by the publisher!",
+    "type": "Publication",
+    "description": "A paper on the polarisation pattern of the sky, from the physics of scattering to what we measure.",
+    "tags": [
+      "Polarimetry",
+      "Writing"
+    ]
+  },
+  {
+    "title": "Quiz App",
+    "status": "ongoing",
+    "type": "App",
+    "description": "A quiz app for practising physics and mathematics, built from the exercises I use in class.",
+    "tags": [
+      "App",
+      "Teaching"
+    ]
+  },
+  {
+    "title": "Sky Lab polarisation simulator",
+    "status": "done",
+    "type": "Interactive",
+    "description": "An all-sky map of Rayleigh polarisation that runs in the browser. Move the Sun or the Moon and the pattern follows.",
+    "tags": [
+      "JavaScript",
+      "Canvas",
+      "Outreach"
+    ],
+    "url": "#lab",
+    "linkLabel": "Open it"
+  },
+  {
+    "title": "Physics, step by step (book)",
+    "status": "ongoing",
+    "type": "Book",
+    "description": "A physics book from the basics to demanding topics, with exercises, graphs and animations. Chapters are published on this site as I write them.",
+    "tags": [
+      "Physics",
+      "Teaching",
+      "Writing"
+    ],
+    "url": "#physics",
+    "linkLabel": "Read the chapters"
+  }
+]
