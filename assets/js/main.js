@@ -32,16 +32,16 @@
         setTimeout(() => { i = (i + 1) % words.length; el.textContent = words[i]; el.classList.remove("out"); }, 350);
       }, 2800);
     }
-    $("#contactLinks").innerHTML = (site.contact || []).map((c) => `
+    if ($("#contactLinks")) $("#contactLinks").innerHTML = (site.contact || []).map((c) => `
       <a href="${esc(c.url)}"${c.url.startsWith("mailto:") ? "" : ' target="_blank" rel="noopener"'}>
         <span aria-hidden="true">${esc(c.icon || "↗")}</span>
         <span>${esc(c.label)} <span class="mono">${esc(c.detail || "")}</span></span>
       </a>`).join("");
-    if (site.patreon) $("#patreonLink").href = site.patreon; else $(".patron").remove();
+    if ($(".patron")) { if (site.patreon) $("#patreonLink").href = site.patreon; else $(".patron").remove(); }
   });
 
   /* ---------- 01 · Timeline: the past, now, and the plan ---------- */
-  getJSON("data/timeline.json").then((items) => {
+  if ($("#timeline")) getJSON("data/timeline.json").then((items) => {
     const groups = [
       ["done", "Journey"], ["now", "Now"], ["next", "Roadmap"],
     ];
@@ -67,7 +67,7 @@
 
   /* ---------- 01 · Projects ---------- */
   const STATUS = { ongoing: "Ongoing", done: "Done", idea: "Planned" };
-  getJSON("data/projects.json").then((items) => {
+  if ($("#projectList")) getJSON("data/projects.json").then((items) => {
     $("#projectList").innerHTML = items.map((p) => `
       <article class="card reveal">
         <div class="project-meta">
@@ -85,7 +85,7 @@
 
 
   /* ---------- 02 · Publications, talks and posters ---------- */
-  getJSON("data/publications.json").then((pub) => {
+  if ($("#featuredPaper")) getJSON("data/publications.json").then((pub) => {
     const f = pub.featured;
     $("#featuredPaper").innerHTML = `
       <div class="paper-badge mono">${esc(f.role)} · ${esc(f.venue)} · ${esc(f.year)}</div>
@@ -133,8 +133,10 @@
 
   /* ---------- 02 · Research explained ---------- */
   const KIND_GLYPH = { "Topic": "◎", "Paper overview": "❡", "Story": "✦" };
-  getJSON("content/research/index.json").then((items) => {
+  if ($("#researchList")) getJSON("content/research/index.json").then((items) => {
     items.sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+    const limit = +$("#researchList").dataset.limit || 0;
+    if (limit) items = items.slice(0, limit);
     const card = (n) => `
       <a class="note reveal" data-kind="${esc(n.kind)}" href="${readLink("research", n.slug)}">
         <div class="note-top">
@@ -149,6 +151,7 @@
     $("#researchList").innerHTML = items.map(card).join("");
     const kinds = ["All", ...new Set(items.map((n) => n.kind))];
     const f = $("#researchFilters");
+    if (f) {
     f.innerHTML = kinds.map((k, i) => `<button role="tab" aria-selected="${!i}" class="${i ? "" : "on"}" data-kind="${esc(k)}">${esc(k === "All" ? k : k === "Story" ? "Stories" : k + "s")}</button>`).join("");
     f.addEventListener("click", (e) => {
       const b = e.target.closest("button"); if (!b) return;
@@ -158,12 +161,14 @@
         n.hidden = !show; if (show) n.classList.add("in");
       });
     });
+    }
     watchReveals($("#researchList"));
   }).catch(fail("#researchList", "research notes"));
 
   /* ---------- 04 · Physics book ---------- */
-  getJSON("content/physics/index.json").then((book) => {
-    if (book.intro) $("#bookLede").textContent = book.intro;
+  if ($("#book")) getJSON("content/physics/index.json").then((book) => {
+    if (book.intro && $("#bookLede")) $("#bookLede").textContent = book.intro;
+    if ($("#exerciseIndex")) renderExercises(book);
     $("#book").innerHTML = book.levels.map((lv) => `
       <div class="level reveal" style="--lv:${lv.number}">
         <div class="level-head">
@@ -187,4 +192,23 @@
       </div>`).join("");
     watchReveals($("#book"));
   }).catch(fail("#book", "the chapters"));
+
+  /* ---------- Physics page: every exercise, chapter by chapter ---------- */
+  async function renderExercises(book) {
+    const box = $("#exerciseIndex");
+    const chapters = book.levels.flatMap((lv) => lv.chapters.map((ch, i) => ({ ...ch, num: `${lv.number}.${i + 1}`, level: lv.name })))
+      .filter((ch) => ch.status !== "soon");
+    const blocks = await Promise.all(chapters.map(async (ch) => {
+      let md = "";
+      try { md = await fetch(`content/physics/${ch.slug}.md`).then((r) => (r.ok ? r.text() : "")); } catch (_) {}
+      const ex = [...md.matchAll(/^:::exercise\s*(.*)$/gm)].map((m, i) => ({ n: i + 1, title: m[1].trim() || `Exercise ${i + 1}` }));
+      return { ch, ex };
+    }));
+    box.innerHTML = blocks.filter((b) => b.ex.length).map(({ ch, ex }) => `
+      <div class="ex-group reveal">
+        <a class="ex-chapter" href="${readLink("physics", ch.slug)}"><span class="mono">${esc(ch.num)} · ${esc(ch.level)}</span>${esc(ch.title)}</a>
+        <ol class="ex-list">${ex.map((e) => `<li><a href="${readLink("physics", ch.slug)}#exercise-${e.n}"><span class="mono">${e.n}</span>${esc(e.title)}</a></li>`).join("")}</ol>
+      </div>`).join("") || '<p class="muted">Exercises will appear here as chapters are published.</p>';
+    watchReveals(box);
+  }
 })();

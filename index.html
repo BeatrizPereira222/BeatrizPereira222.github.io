@@ -31,6 +31,7 @@
       <a href="#research" data-section="research">Research</a>
       <a href="#physics" data-section="physics">Physics</a>
       <a href="#lab" data-section="lab">Sky Lab</a>
+      <a href="about.html">About me</a>
       <a href="#contact" class="nav-cta" data-section="contact">Contact</a>
     </nav>
   </header>
@@ -41,7 +42,7 @@
       <div class="hero-text">
         <p class="eyebrow mono">Software engineer · Astrophysics · Researcher · Science communicator</p>
         <h1>Beatriz<br><em>Pereira</em></h1>
-        <p class="hero-sub">I study how light <span class="rotator" id="rotator">scatters</span> on its way to us, and try to understand what is beyond. The journey is not just mine, so I explain physics.</p>
+        <p class="hero-sub">I study how light <span class="rotator" id="rotator">scatters</span> on its way to us, and try to understand what lies beyond. It is a journey worth sharing, so I explain the physics along the way.</p>
         <div class="hero-actions">
           <a href="#work" class="btn">See my work</a>
           <a href="#physics" class="btn btn-ghost">Start learning physics</a>
@@ -68,41 +69,36 @@
       <header class="section-head reveal">
         <span class="mono idx">01</span>
         <h2>Me &amp; my work</h2>
-        <p class="lede">Where I've been, what I'm doing now, and what comes next.</p>
+        <p class="lede">Research, software and teaching. <a href="about.html">More about me and my timeline →</a></p>
       </header>
 
       <div class="bio reveal">
         <div class="cards three">
-          <article class="card">
+          <a class="card card-link" href="research.html">
             <span class="card-ico" aria-hidden="true">◎</span>
             <h3>Research</h3>
-            <p>Moonlit sky polarisation and atmospheric scattering, with observations from ESO Paranal published in A&amp;A. Now studying exoplanets.</p>
+            <p>Working on several topics, from the polarisation of the moonlit sky to galaxies and exoplanets. Here I explain the articles behind them.</p>
             <ul class="tags"><li>Polarimetry</li><li>Scattering</li><li>Exoplanets</li></ul>
-          </article>
-          <article class="card">
+            <span class="card-go">Explore the articles →</span>
+          </a>
+          <a class="card card-link" href="#projects">
             <span class="card-ico" aria-hidden="true">⌬</span>
-            <h3>Software</h3>
-            <p>From CENTRA to quantum key distribution at N10GLED and cloud data at Siemens Healthineers. Python is my favourite tool, with Astropy, Pandas, Pypogs and SciPy.</p>
-            <ul class="tags"><li>Python</li><li>Astropy</li><li>JavaScript</li><li>C++</li><li>FinOps</li></ul>
-          </article>
-          <article class="card">
+            <h3>Software Development</h3>
+            <p>IT Service Designer / Developer at Siemens Healthineers. Before that, quantum key distribution software at N10GLED and astronomical data at CENTRA.</p>
+            <ul class="tags"><li>Python</li><li>JavaScript</li><li>C++</li><li>Cloud &amp; FinOps</li></ul>
+            <span class="card-go">See my projects ↓</span>
+          </a>
+          <a class="card card-link" href="physics.html">
             <span class="card-ico" aria-hidden="true">☾</span>
             <h3>Teaching</h3>
-            <p>Teaching physics and mathematics, and educational resources that simplify hard ideas and leave room for curiosity.</p>
-            <ul class="tags"><li>Physics</li><li>Mathematics</li><li>Outreach</li></ul>
-          </article>
+            <p>Private physics teacher since 2023. All the physics themes I teach, from the basics to advanced topics, with worked exercises.</p>
+            <ul class="tags"><li>Physics</li><li>Mathematics</li><li>Exercises</li></ul>
+            <span class="card-go">Themes &amp; exercises →</span>
+          </a>
         </div>
       </div>
 
-      <div class="sub-head reveal">
-        <h3>Timeline</h3>
-        <div class="legend-pills mono" aria-hidden="true">
-          <span><i class="dot done"></i>Done</span><span><i class="dot now"></i>Now</span><span><i class="dot next"></i>Planned</span>
-        </div>
-      </div>
-      <div class="chrono" id="timeline"><p class="muted">Loading timeline…</p></div>
-
-      <div class="sub-head reveal"><h3>Projects</h3></div>
+      <div class="sub-head reveal" id="projects"><h3>Projects</h3></div>
       <div class="cards two" id="projectList"><p class="muted">Loading projects…</p></div>
     </section>
 
@@ -123,8 +119,8 @@
       </div>
 
       <div class="sub-head reveal"><h3>Explained</h3><p class="muted small" style="margin:0">Research topics and papers, in plain language.</p></div>
-      <div class="filters" id="researchFilters" role="tablist" aria-label="Filter by type"></div>
-      <div class="notes" id="researchList"><p class="muted">Loading…</p></div>
+      <div class="notes" id="researchList" data-limit="3"><p class="muted">Loading…</p></div>
+      <p class="more-link reveal"><a class="btn btn-ghost" href="research.html">All articles explained →</a></p>
     </section>
 
     <!-- ───────── 03 · Sky Lab: the models from the paper ───────── -->
@@ -250,6 +246,7 @@
         <p class="lede" id="bookLede">From the basics to the demanding topics, with exercises, graphs and animations. This is the book I'm writing, one chapter at a time.</p>
       </header>
       <div class="book" id="book"><p class="muted">Loading chapters…</p></div>
+      <p class="more-link reveal"><a class="btn btn-ghost" href="physics.html">All themes &amp; exercises →</a></p>
     </section>
 
     <!-- ───────── Contact ───────── -->

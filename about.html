@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About me · Beatriz Pereira</title>
+  <meta name="theme-color" content="#05060a">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400;1,500&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="topbar" id="topbar">
+    <a href="index.html" class="brand" aria-label="Beatriz Pereira, home">
+      <span class="brand-mark brand-orbit" aria-hidden="true"><span></span></span>
+      <span class="brand-name">Beatriz Pereira</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span class="sr-only">Menu</span>
+    </button>
+    <nav id="nav" class="nav">
+      <a href="index.html#work" data-section="work">My work</a>
+      <a href="index.html#research" data-section="research">Research</a>
+      <a href="index.html#physics" data-section="physics">Physics</a>
+      <a href="index.html#lab" data-section="lab">Sky Lab</a>
+      <a href="about.html" data-section="about" class="active">About me</a>
+      <a href="index.html#contact" class="nav-cta">Contact</a>
+    </nav>
+  </header>
+
+
+  <main>
+    <section class="section page-top">
+      <header class="section-head plain reveal">
+        <h2>About me</h2>
+        <p class="lede">Where I've been, what I'm doing now, and what comes next.</p>
+      </header>
+      <div class="sub-head reveal" style="margin-top:0;border-top:0;padding-top:0">
+        <h3>Timeline</h3>
+        <div class="legend-pills mono" aria-hidden="true">
+          <span><i class="dot done"></i>Done</span><span><i class="dot now"></i>Now</span><span><i class="dot next"></i>Planned</span>
+        </div>
+      </div>
+      <div class="chrono" id="timeline"><p class="muted">Loading timeline…</p></div>
+
+      <div class="sub-head reveal"><h3>Get in touch</h3></div>
+      <div class="contact-links reveal" id="contactLinks"></div>
+    </section>
+  </main>
+
+  <footer class="footer mono">
+    <span>© <span id="year"></span> Beatriz Pereira</span>
+    <span><a href="index.html">Home</a> · <a href="#top" onclick="scrollTo(0,0);return false">Back to top ↑</a></span>
+  </footer>
+
+  <script src="assets/js/starfield.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
