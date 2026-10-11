@@ -1,14 +1,18 @@
 [
   {
-    "title": "Article: Sky Polarisation",
-    "status": "ongoing",
-    "note": "Accepted by the publisher!",
+    "title": "Moonlit sky polarization patterns from Cerro Paranal",
+    "status": "done",
+    "note": "First-author paper · Astronomy & Astrophysics, 2026",
     "type": "Publication",
-    "description": "A paper on the polarisation pattern of the sky, from the physics of scattering to what we measure.",
+    "description": "Full-Moon sky polarisation measured with FORS2 at the VLT in four bands and compared with Rayleigh, Mie and multiple-scattering models.",
     "tags": [
       "Polarimetry",
-      "Writing"
-    ]
+      "VLT / FORS2",
+      "Python",
+      "MCMC"
+    ],
+    "url": "https://doi.org/10.1051/0004-6361/202555617",
+    "linkLabel": "Read the paper"
   },
   {
     "title": "Quiz App",
@@ -24,7 +28,7 @@
     "title": "Sky Lab polarisation simulator",
     "status": "done",
     "type": "Interactive",
-    "description": "An all-sky map of Rayleigh polarisation that runs in the browser. Move the Sun or the Moon and the pattern follows.",
+    "description": "The models from my paper in your browser: anisotropic Rayleigh and multiple scattering, with the real Sun and Moon positions over Paranal and the measured data.",
     "tags": [
       "JavaScript",
       "Canvas",

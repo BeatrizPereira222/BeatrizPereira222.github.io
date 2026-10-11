@@ -1,29 +1,95 @@
 [
-  { "slug": "why-is-the-sky-polarised", "kind": "Topic", "date": "2026-10-08",
+  {
+    "slug": "moonlit-sky-paranal",
+    "kind": "Paper overview",
+    "date": "2026-10-11",
+    "title": "My paper: the moonlit sky over Paranal",
+    "summary": "What we measured with the VLT on two full-Moon nights, what the data show, and which scattering models explain them.",
+    "tags": [
+      "My research",
+      "VLT / FORS2",
+      "Polarimetry"
+    ],
+    "paper": {
+      "title": "Moonlit sky polarization patterns from Cerro Paranal",
+      "authors": "B. Pereira, S. González-Gaitán, A. M. Mourão et al.",
+      "venue": "Astronomy & Astrophysics",
+      "year": "2026",
+      "url": "https://doi.org/10.1051/0004-6361/202555617"
+    }
+  },
+  {
+    "slug": "why-is-the-sky-polarised",
+    "kind": "Topic",
+    "date": "2026-10-08",
     "title": "Why is the sky polarised?",
     "summary": "The blue sky hides a pattern our eyes can't see but bees, cameras and polarimeters can. Here's where it comes from.",
-    "tags": ["Polarimetry", "Scattering", "Beginner"] },
-  { "slug": "moonlight-polarisation", "kind": "Topic", "date": "2026-10-05",
+    "tags": [
+      "Polarimetry",
+      "Scattering",
+      "Beginner"
+    ]
+  },
+  {
+    "slug": "moonlight-polarisation",
+    "kind": "Topic",
+    "date": "2026-10-05",
     "title": "The polarised night sky",
     "summary": "Moonlight is scattered by the atmosphere too. Measuring its faint polarisation is the heart of my research.",
-    "tags": ["Moonlight", "Polarimetry", "My research"] },
-  { "slug": "rayleigh-1871", "kind": "Paper overview", "date": "2026-10-03",
+    "tags": [
+      "Moonlight",
+      "Polarimetry"
+    ]
+  },
+  {
+    "slug": "rayleigh-1871",
+    "kind": "Paper overview",
+    "date": "2026-10-03",
     "title": "Rayleigh (1871): the paper that explained the blue sky",
     "summary": "How a 28-year-old Lord Rayleigh explained both the colour and the polarisation of skylight with tiny particles.",
-    "tags": ["Classic paper", "Scattering"],
-    "paper": { "title": "On the light from the sky, its polarization and colour", "authors": "J. W. Strutt (Lord Rayleigh)",
-               "venue": "Philosophical Magazine, vol. 41", "year": "1871",
-               "url": "https://www.cambridge.org/core/books/scientific-papers/on-the-light-from-the-sky-its-polarization-and-colour/CB11663B07A3D46EE4CE6D05A1E09512" } },
-  { "slug": "what-is-a-black-hole", "kind": "Story", "date": "2026-10-01",
+    "tags": [
+      "Classic paper",
+      "Scattering"
+    ],
+    "paper": {
+      "title": "On the light from the sky, its polarization and colour",
+      "authors": "J. W. Strutt (Lord Rayleigh)",
+      "venue": "Philosophical Magazine, vol. 41",
+      "year": "1871",
+      "url": "https://www.cambridge.org/core/books/scientific-papers/on-the-light-from-the-sky-its-polarization-and-colour/CB11663B07A3D46EE4CE6D05A1E09512"
+    }
+  },
+  {
+    "slug": "what-is-a-black-hole",
+    "kind": "Story",
+    "date": "2026-10-01",
     "title": "What actually is a black hole?",
     "summary": "Not a cosmic vacuum cleaner: a region where gravity wins every argument, even with light.",
-    "tags": ["Black holes", "Beginner"] },
-  { "slug": "why-stars-twinkle", "kind": "Story", "date": "2026-09-15",
+    "tags": [
+      "Black holes",
+      "Beginner"
+    ]
+  },
+  {
+    "slug": "why-stars-twinkle",
+    "kind": "Story",
+    "date": "2026-09-15",
     "title": "Why do stars twinkle (and planets don't)?",
     "summary": "Blame the atmosphere: turbulence, point sources and why astronomers love mountaintops.",
-    "tags": ["Observing", "Beginner"] },
-  { "slug": "we-are-made-of-star-stuff", "kind": "Story", "date": "2026-08-30",
+    "tags": [
+      "Observing",
+      "Beginner"
+    ]
+  },
+  {
+    "slug": "we-are-made-of-star-stuff",
+    "kind": "Story",
+    "date": "2026-08-30",
     "title": "We are made of star stuff, literally",
     "summary": "The iron in your blood and the calcium in your bones were forged inside stars that died long ago.",
-    "tags": ["Stars", "Chemistry"] }
+    "tags": [
+      "Stars",
+      "Chemistry"
+    ]
+  }
 ]

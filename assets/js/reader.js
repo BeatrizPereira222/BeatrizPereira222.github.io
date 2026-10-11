@@ -16,7 +16,7 @@
 
   const SECTIONS = {
     physics: { name: "Physics, step by step", anchor: "physics" },
-    research: { name: "Research explained", anchor: "research" },
+    research: { name: "Research", anchor: "research" },
   };
   const section = SECTIONS[coll];
   const fail = (msg) => { head.innerHTML = `<h1>Lost in space</h1>`; main.innerHTML = `<p>${msg} <a href="index.html">Back to the homepage</a>.</p>`; };

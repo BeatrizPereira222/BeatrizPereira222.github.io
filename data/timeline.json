@@ -1,17 +1,21 @@
 [
-  { "status": "done", "when": "YYYY", "title": "Physics degree", "where": "University — replace", "text": "Replace with your degree, university and the topic of your thesis." },
-  { "status": "done", "when": "YYYY", "title": "Quantum key distribution", "where": "Research project", "text": "Sharing encryption keys with single photons and quantum mechanics." },
-  { "status": "done", "when": "YYYY", "title": "Exoplanets and astrobiology", "where": "Research project", "text": "Exoplanet habitability, detection methods and atmospheric characterisation." },
-  { "status": "done", "when": "YYYY", "title": "Software at CENTRA", "where": "CENTRA", "text": "Data handling and visualisation in Python." },
-  { "status": "done", "when": "YYYY", "title": "Software at Entangled Space", "where": "Entangled Space", "text": "App development and complex systems." },
-  { "status": "done", "when": "YYYY – now", "title": "Teaching physics and mathematics", "text": "Several years of classes, and the exercises that became the start of my book." },
+  { "status": "done", "when": "2014 – 2015", "title": "Electrotechnical and Computer Engineering", "where": "Instituto Superior Técnico", "text": "First year of the integrated master's, where I started programming in C and Assembly." },
+  { "status": "done", "when": "2015 – 2022", "title": "Master's in Physics Engineering", "where": "Instituto Superior Técnico", "text": "Final grade 16/20, with courses in machine learning, astrobiology and particle physics. C++, Python, MESA and Fortran." },
+  { "status": "done", "when": "2018", "title": "Summer internships", "where": "CENTRA · EDP Labelec", "text": "Cosmology, Hořava's theory and black holes at CENTRA; calibration protocols in the high-voltage lab at EDP Labelec." },
+  { "status": "done", "when": "2019", "title": "First poster: polarization patterns in the sky", "where": "XXIX ENAA", "text": "Simulating how the Sun and Moon polarize the sky, and how that affects astronomical observations.", "link": { "label": "See the poster", "url": "#publications" } },
+  { "status": "done", "when": "Jan 2021", "title": "Observing at ESO Paranal", "where": "VLT UT1 Antu · FORS2", "text": "Polarimetric observations of blank fields in the moonlit sky, programme 106.21L9 (CRISP project)." },
+  { "status": "done", "when": "2021", "title": "Research grant and second poster", "where": "CRISP PTDC/FIS-AST/31546/2017 · XXXI ENAA", "text": "\"Modelling sky polarization patterns\", comparing the Rayleigh model with the Paranal data.", "link": { "label": "See the poster", "url": "#publications" } },
+  { "status": "done", "when": "2022", "title": "Master's thesis and talks", "where": "IST – CENTRA · Lisbon · Politecnico di Milano", "text": "\"Polarization patterns in the sky and their influence on astronomical observations\", graded 19/20. Presented at XXXI ENAA and at Astrophysical Polarimetry in the Time-Domain Era (Lecco)." },
+  { "status": "done", "when": "2023 – 2024", "title": "Software engineer", "where": "N10GLED", "text": "Software for a quantum key distribution (QKD) system for long-range secure communication. Python, Pypogs, ASCOM." },
+  { "status": "done", "when": "2024 – 2025", "title": "Private physics teacher", "text": "One-to-one physics classes, and the exercises that became the start of my book." },
+  { "status": "done", "when": "2025", "title": "Co-author: R_V from galaxy polarimetry near supernovae", "where": "A&A 703, A170", "text": "Using multi-band polarimetry of host galaxies to study dust near supernovae.", "link": { "label": "Publications", "url": "#publications" } },
+  { "status": "done", "when": "2025 – 2026", "title": "Technical intern (FinOps)", "where": "Siemens Healthineers", "text": "Cloud cost analysis, reporting automation and forecasting. FinOps Certified Practitioner, FOCUS Analyst and AI Value." },
 
-  { "status": "now", "when": "2026", "title": "PhD in polarimetry", "where": "Your university — replace", "text": "Polarimetric observations, scattering processes and moonlight polarisation.", "link": { "label": "Research explained", "url": "#research" } },
-  { "status": "now", "when": "Oct 2026", "title": "Sky polarisation article accepted", "text": "Accepted by the publisher. Publication coming soon." },
+  { "status": "now", "when": "2026", "title": "First-author paper published", "where": "Astronomy & Astrophysics", "text": "\"Moonlit sky polarization patterns from Cerro Paranal\": the full-Moon sky measured with FORS2 and compared with scattering models.", "link": { "label": "Read the overview", "url": "read.html?c=research&s=moonlit-sky-paranal" } },
+  { "status": "now", "when": "2026", "title": "Studying exoplanets", "text": "Exoplanet detection, habitability and atmospheric characterisation, where polarimetry is becoming a powerful tool." },
   { "status": "now", "when": "2026", "title": "Writing Physics, step by step", "text": "A book from the basics to demanding topics, published here chapter by chapter.", "link": { "label": "Read the chapters", "url": "#physics" } },
 
-  { "status": "next", "when": "Q4 2026", "title": "Sky polarisation article published", "text": "Plus a plain-language overview of it on this site." },
-  { "status": "next", "when": "Q1 2027", "title": "Quiz App, first public version", "text": "Practice physics and maths with the exercises from the book." },
-  { "status": "next", "when": "2027", "title": "Book: Level 1 complete", "text": "All Foundations chapters online, with exercises and solutions." },
-  { "status": "next", "when": "Later", "title": "Type Ia supernovae", "text": "A research direction I hope to explore next." }
+  { "status": "next", "when": "Next", "title": "Book: Level 1 complete", "text": "All Foundations chapters online, with exercises and solutions." },
+  { "status": "next", "when": "Next", "title": "Quiz App, first public version", "text": "Practise physics and maths with the exercises from the book." },
+  { "status": "next", "when": "Later", "title": "Polarimetry of other worlds", "text": "Bringing sky-polarization and scattering models to exoplanet atmospheres." }
 ]

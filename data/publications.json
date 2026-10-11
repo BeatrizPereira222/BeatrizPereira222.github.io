@@ -1,0 +1,35 @@
+{
+  "featured": {
+    "title": "Moonlit sky polarization patterns from Cerro Paranal",
+    "authors": "B. Pereira, S. González-Gaitán, A. M. Mourão, J. Rino-Silvestre, A. Paulino-Afonso, J. P. Anderson, A. Cikota, A. Morales-Garoffolo",
+    "venue": "Astronomy & Astrophysics",
+    "year": "2026",
+    "role": "First author",
+    "summary": "We measured how the full-Moon sky over ESO Paranal is polarised, in four colours, with FORS2 at the Very Large Telescope, and compared it with single- and multiple-scattering models. Polarisation peaks 90° from the Moon and drops from about 60% in blue light to 30% in near-infrared light.",
+    "doi": "10.1051/0004-6361/202555617",
+    "arxiv": "2510.27308",
+    "overview": "read.html?c=research&s=moonlit-sky-paranal"
+  },
+  "items": [
+    { "kind": "Paper", "year": "2025", "role": "Co-author",
+      "title": "R_V from multi-waveband galaxy polarimetry in supernovae vicinity",
+      "authors": "J. Rino-Silvestre, S. González-Gaitán, A. Mourão, J. Duarte, B. Pereira",
+      "venue": "Astronomy & Astrophysics 703, A170", "url": "https://arxiv.org/abs/2502.09875" },
+    { "kind": "Thesis", "year": "2022", "role": "Master's thesis · 19/20",
+      "title": "Polarization patterns in the sky and their influence on astronomical observations",
+      "venue": "Instituto Superior Técnico · CENTRA" },
+    { "kind": "Talk", "year": "2022", "role": "Talk",
+      "title": "Polarization sky patterns", "venue": "XXXI ENAA, Lisbon · Astrophysical Polarimetry in the Time-Domain Era, Lecco (Politecnico di Milano)" },
+    { "kind": "Talk", "year": "2020", "role": "Talk · video",
+      "title": "Polarization patterns in the sky: state of the art", "venue": "MEFT project workshop, IST – CENTRA",
+      "url": "https://www.youtube.com/watch?v=-45nPP9BghQ" }
+  ],
+  "posters": [
+    { "year": "2021", "event": "XXXI ENAA", "title": "On the way! Modelling sky polarization patterns",
+      "image": "assets/img/posters/poster-2021-xxxi-enaa.jpg", "thumb": "assets/img/posters/poster-2021-xxxi-enaa-thumb.jpg",
+      "text": "First comparison of the Rayleigh model with the FORS2 data from Paranal, band by band." },
+    { "year": "2019", "event": "XXIX ENAA", "title": "Polarization patterns in the sky (and their influence on astronomical observations)",
+      "image": "assets/img/posters/poster-2019-xxix-enaa.jpg", "thumb": "assets/img/posters/poster-2019-xxix-enaa-thumb.jpg",
+      "text": "Simulations of the Sun- and Moon-induced polarization over Lisbon, with Rayleigh and multiple-scattering models." }
+  ]
+}

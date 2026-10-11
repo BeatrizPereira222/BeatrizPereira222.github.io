@@ -83,6 +83,54 @@
     watchReveals($("#projectList"));
   }).catch(fail("#projectList", "projects"));
 
+
+  /* ---------- 02 · Publications, talks and posters ---------- */
+  getJSON("data/publications.json").then((pub) => {
+    const f = pub.featured;
+    $("#featuredPaper").innerHTML = `
+      <div class="paper-badge mono">${esc(f.role)} · ${esc(f.venue)} · ${esc(f.year)}</div>
+      <h3>${esc(f.title)}</h3>
+      <p class="paper-authors">${esc(f.authors).replace("B. Pereira", "<strong>B. Pereira</strong>")}</p>
+      <p>${esc(f.summary)}</p>
+      <div class="hero-actions">
+        <a class="btn" href="${esc(f.overview)}">Read the overview</a>
+        <a class="btn btn-ghost" href="https://doi.org/${esc(f.doi)}" target="_blank" rel="noopener">Paper (A&amp;A) ↗</a>
+        <a class="btn btn-ghost" href="https://arxiv.org/abs/${esc(f.arxiv)}" target="_blank" rel="noopener">arXiv ↗</a>
+        <a class="btn btn-ghost" href="#lab">Try the models ↓</a>
+      </div>`;
+    $("#pubList").innerHTML = pub.items.map((it) => `
+      <li>
+        <span class="mono pub-year">${esc(it.year)}</span>
+        <div>
+          <span class="pub-kind mono">${esc(it.role || it.kind)}</span>
+          <p class="pub-title">${it.url ? `<a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.title)} ↗</a>` : esc(it.title)}</p>
+          ${it.authors ? `<p class="pub-meta">${esc(it.authors).replace("B. Pereira", "<strong>B. Pereira</strong>")}</p>` : ""}
+          <p class="pub-meta mono">${esc(it.venue)}</p>
+        </div>
+      </li>`).join("");
+    $("#posterList").innerHTML = pub.posters.map((p, i) => `
+      <button class="poster reveal" data-i="${i}" aria-label="Open poster: ${esc(p.title)}">
+        <img src="${esc(p.thumb)}" alt="" loading="lazy">
+        <span class="poster-body">
+          <span class="mono pub-kind">${esc(p.event)} · ${esc(p.year)}</span>
+          <span class="poster-title">${esc(p.title)}</span>
+          <span class="muted small">${esc(p.text)}</span>
+        </span>
+      </button>`).join("");
+    const lb = $("#lightbox"), lbImg = $("#lightboxImg");
+    $("#posterList").addEventListener("click", (e) => {
+      const b = e.target.closest(".poster"); if (!b) return;
+      const p = pub.posters[+b.dataset.i];
+      lbImg.src = p.image; lbImg.alt = p.title; $("#lightboxCap").textContent = `${p.title} · ${p.event} ${p.year}`;
+      lb.hidden = false; document.body.style.overflow = "hidden"; $("#lightboxClose").focus();
+    });
+    const close = () => { lb.hidden = true; document.body.style.overflow = ""; };
+    $("#lightboxClose").addEventListener("click", close);
+    lb.addEventListener("click", (e) => { if (e.target === lb) close(); });
+    addEventListener("keydown", (e) => { if (e.key === "Escape" && !lb.hidden) close(); });
+    watchReveals($("#publications"));
+  }).catch(fail("#featuredPaper", "publications"));
+
   /* ---------- 02 · Research explained ---------- */
   const KIND_GLYPH = { "Topic": "◎", "Paper overview": "❡", "Story": "✦" };
   getJSON("content/research/index.json").then((items) => {
