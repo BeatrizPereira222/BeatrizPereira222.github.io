@@ -32,7 +32,3 @@ If you only need to **predict and correct** the moonlit sky's polarisation in yo
 ## Why it matters
 
 Polarimetry is used to study supernovae, active galaxies, kilonovae and the dust in galaxies. All of these are faint, so the background matters. This work gives observers at Paranal a way to model the moonlit sky's contribution, and it shows that the atmosphere above the observatory contains enough large aerosols to leave a clear signature.
-
-## Try it yourself
-
-The [Sky Lab](index.html#lab) runs these models for any night and shows our measured fields at their positions in the sky.

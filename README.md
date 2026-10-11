@@ -7,7 +7,6 @@ Plain HTML/CSS/JS, so it runs on GitHub Pages with no build step.
 |---|---|---|
 | **01 · Me & my work** | Bio, timeline (Journey → Now → Roadmap), projects | `index.html` (bio), `data/timeline.json`, `data/projects.json` |
 | **02 · Research** | Featured paper, publications & talks, posters, and lessons/overviews | `data/publications.json`, `assets/img/posters/`, `content/research/` |
-| **03 · Sky Lab** | The paper's models (single + multiple scattering) for any date/site, FORS2 fields and data | `assets/js/skylab.js`, `data/paranal-observations.json` |
 | **04 · Physics, step by step** | The book: chapters by level, with exercises, plots, GIFs | `content/physics/` |
 | **Contact** | Links + Patreon | `data/site.json` |
 
@@ -77,16 +76,3 @@ python -m http.server 8000
 
 Libraries (marked for Markdown, KaTeX for maths, Plotly for plots) are bundled in `assets/vendor/`,
 so nothing depends on outside services. Plotly only downloads on pages that contain a plot.
-
-## Sky Lab details
-Four steps, following the paper and its analysis code:
-1. **Rayleigh:** `p = sin²γ/(1+cos²γ)`.
-2. **Rayleigh variations:** `A(λ)·Rayleigh` with A = 0.64, 0.614, 0.555, 0.316 (`par_wave_val`, art_sun.py), or
-   depolarisation `sin²γ/((1+P)/(1−P)+cos²γ)` (art_dep.py), with P presets fitted to the clear-night data.
-3. **Multiple scattering:** Berry et al. (2004), `A(λ)·|w(ξ)|`, written with (1 + ξ ξ±*) so the angle is right.
-4. **Rayleigh + Mie + unpolarised MS:** tables in `data/scatter-tables.json`, built by `tools/build_scatter_tables.py`
-   with `mie_size_dist` (4 Jones+13 species, Table 4 refractive indices).
-- Twilight (any step): Moon only while the Sun is below −18°; above that, normalised Stokes vectors mixed with weight par·albedo (art_sun.py).
-- Angle of polarisation shown in the convention of `rotation_angles()` (χ = β′ − 90°).
-- Data: `data/paranal-observations.json`, from `moonlit_data.csv` (conditions ok / clouds / sun).
-- Sun/Moon positions: Astronomy Engine; scattering angles reproduce the tables to better than 1°.

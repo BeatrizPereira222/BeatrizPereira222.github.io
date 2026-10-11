@@ -50,8 +50,6 @@ At $\gamma = 90°$ the scattered light is **fully** polarised. In the real atmos
 {"src": "../research/figures/rayleigh-degree.json", "caption": "Degree of polarisation against scattering angle, for three values of P_max.", "height": 380}
 ```
 
-You can explore the full-sky version of this pattern in the [Sky Lab](index.html#lab).
-
 ## Exercises
 
 :::exercise Blue versus red

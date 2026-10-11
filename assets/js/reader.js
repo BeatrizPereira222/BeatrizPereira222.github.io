@@ -15,13 +15,13 @@
   const main = $("#doc"), head = $("#docHead"), tocEl = $("#toc"), pager = $("#pager");
 
   const SECTIONS = {
-    physics: { name: "Physics, step by step", anchor: "physics" },
-    research: { name: "Research", anchor: "research" },
+    physics: { name: "Physics", anchor: "physics", page: "physics.html" },
+    research: { name: "Research", anchor: "research", page: "research.html" },
   };
   const section = SECTIONS[coll];
   const fail = (msg) => { head.innerHTML = `<h1>Lost in space</h1>`; main.innerHTML = `<p>${msg} <a href="index.html">Back to the homepage</a>.</p>`; };
   if (!section || !slug) return fail("This page doesn't exist.");
-  $$(`#nav a[data-section="${section.anchor}"]`).forEach((a) => a.classList.add("active"));
+  $$(`#nav a[href="${section.page}"]`).forEach((a) => a.classList.add("active"));
 
   // ---------- Find the entry and its neighbours ----------
   let index;
@@ -36,7 +36,7 @@
 
   document.title = `${item.title} · Beatriz Pereira`;
   const crumb = coll === "physics" ? `${section.name} · ${item.level}` : `${section.name} · ${item.kind || ""}`;
-  $("#crumb").innerHTML = `<a href="index.html#${section.anchor}">← ${esc(crumb)}</a>`;
+  $("#crumb").innerHTML = `<a href="${section.page}">← ${esc(crumb)}</a>`;
 
   // ---------- Load the Markdown ----------
   let src;

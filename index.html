@@ -19,7 +19,7 @@
 
   <!-- ───────── Top menu ───────── -->
   <header class="topbar" id="topbar">
-    <a href="#home" class="brand" aria-label="Back to top">
+    <a href="index.html" class="brand" aria-label="Beatriz Pereira, home">
       <span class="brand-mark brand-orbit" aria-hidden="true"><span></span></span>
       <span class="brand-name">Beatriz Pereira</span>
     </a>
@@ -27,12 +27,11 @@
       <span></span><span></span><span class="sr-only">Menu</span>
     </button>
     <nav id="nav" class="nav">
-      <a href="#work" data-section="work">My work</a>
-      <a href="#research" data-section="research">Research</a>
-      <a href="#physics" data-section="physics">Physics</a>
-      <a href="#lab" data-section="lab">Sky Lab</a>
+      <a href="index.html" class="active" aria-current="page">Home</a>
+      <a href="research.html">Research</a>
+      <a href="physics.html">Physics</a>
       <a href="about.html">About me</a>
-      <a href="#contact" class="nav-cta" data-section="contact">Contact</a>
+      <a href="index.html#contact" class="nav-cta">Contact</a>
     </nav>
   </header>
 
@@ -45,7 +44,7 @@
         <p class="hero-sub">I study how light <span class="rotator" id="rotator">scatters</span> on its way to us, and try to understand what lies beyond. It is a journey worth sharing, so I explain the physics along the way.</p>
         <div class="hero-actions">
           <a href="#work" class="btn">See my work</a>
-          <a href="#physics" class="btn btn-ghost">Start learning physics</a>
+          <a href="physics.html" class="btn btn-ghost">Start learning physics</a>
         </div>
       </div>
 
@@ -102,157 +101,10 @@
       <div class="cards two" id="projectList"><p class="muted">Loading projects…</p></div>
     </section>
 
-    <!-- ───────── 02 · Research ───────── -->
-    <section id="research" class="section">
-      <header class="section-head reveal">
-        <span class="mono idx">02</span>
-        <h2>Research</h2>
-        <p class="lede">How moonlight and sunlight polarise the sky, and why it matters for every polarimetric observation made from the ground.</p>
-      </header>
-
-      <div id="publications">
-        <article class="paper-hero reveal" id="featuredPaper"><p class="muted">Loading…</p></article>
-        <div class="sub-head reveal"><h3>Publications &amp; talks</h3></div>
-        <ul class="pubs reveal" id="pubList"></ul>
-        <div class="sub-head reveal"><h3>Posters</h3></div>
-        <div class="posters" id="posterList"></div>
-      </div>
-
-      <div class="sub-head reveal"><h3>Explained</h3><p class="muted small" style="margin:0">Research topics and papers, in plain language.</p></div>
-      <div class="notes" id="researchList" data-limit="3"><p class="muted">Loading…</p></div>
-      <p class="more-link reveal"><a class="btn btn-ghost" href="research.html">All articles explained →</a></p>
-    </section>
-
-    <!-- ───────── 03 · Sky Lab: the models from the paper ───────── -->
-    <section id="lab" class="section">
-      <header class="section-head reveal">
-        <span class="mono idx">03</span>
-        <h2>Sky Lab</h2>
-        <p class="lede">The models from my paper, step by step: pure Rayleigh scattering, its variations, multiple scattering, and the full Rayleigh + Mie + multiple-scattering model. Pick a night and a place, and the Sun and Moon move to their real positions.</p>
-      </header>
-
-      <div class="steps reveal" role="tablist" aria-label="Model steps" id="steps">
-        <button class="on" data-step="1" role="tab" aria-selected="true"><span class="mono">01</span>Rayleigh</button>
-        <button data-step="2" role="tab" aria-selected="false"><span class="mono">02</span>Rayleigh variations</button>
-        <button data-step="3" role="tab" aria-selected="false"><span class="mono">03</span>Multiple scattering</button>
-        <button data-step="4" role="tab" aria-selected="false"><span class="mono">04</span>Rayleigh + Mie + MS</button>
-      </div>
-
-      <div class="lab reveal">
-        <div class="lab-view">
-          <canvas id="skyMap" width="600" height="600" aria-label="All-sky map of the polarisation of the sky"></canvas>
-          <div class="compass mono" aria-hidden="true"><span class="n">N</span><span class="e">E</span><span class="s">S</span><span class="w">W</span></div>
-        </div>
-        <div class="lab-panel">
-          <div class="step-intro">
-            <p class="eyebrow mono" id="stepTag">Step 1</p>
-            <p id="stepText"></p>
-            <p class="formula mono" id="stepFormula"></p>
-          </div>
-
-          <div class="lab-row two">
-            <div class="seg three" role="radiogroup" aria-label="Map" id="segView">
-              <button class="on" data-v="dop" role="radio" aria-checked="true">Degree</button>
-              <button data-v="aop" role="radio" aria-checked="false">Angle</button>
-              <button data-v="int" role="radio" aria-checked="false" id="viewInt">Intensity</button>
-            </div>
-          </div>
-          <div class="lab-row two">
-            <label class="sel"><span class="sr-only">Light source</span>
-              <select id="source"><option value="moon">☾ Moon</option><option value="sun">☀ Sun</option><option value="twilight">☾ + ☀ Twilight</option></select>
-            </label>
-            <div class="bands" role="radiogroup" aria-label="Filter band" id="bands">
-              <button data-b="B">B</button><button class="on" data-b="V">V</button><button data-b="R">R</button><button data-b="I">I</button>
-            </div>
-          </div>
-
-          <div class="step-ctl" data-for="2">
-            <div class="seg" role="radiogroup" aria-label="Variation" id="segVar">
-              <button class="on" data-v="A" role="radio" aria-checked="true">Max. polarisation A(λ)</button>
-              <button data-v="P" role="radio" aria-checked="false">Depolarisation P</button>
-            </div>
-          </div>
-          <label class="ctl step-ctl" data-for="2 3" id="aCtl"><span>Max. polarisation A(λ) <output id="aOut" class="mono"></output></span>
-            <input type="range" id="aMax" min="0.05" max="1" step="0.005"></label>
-          <label class="ctl step-ctl" data-for="2" id="pCtl"><span>Depolarisation P <output id="pOut" class="mono"></output></span>
-            <input type="range" id="pDep" min="0" max="0.9" step="0.005"></label>
-          <label class="ctl step-ctl" data-for="3"><span>Neutral-point parameter L <output id="lOut" class="mono"></output></span>
-            <input type="range" id="lPar" min="0" max="0.8" step="0.01"></label>
-          <label class="ctl step-ctl" data-for="4"><span>Share of light from molecules η <output id="eOut" class="mono"></output></span>
-            <input type="range" id="eta" min="0" max="1" step="0.005"></label>
-          <label class="ctl step-ctl" data-for="4"><span>Unpolarised multiple scattering u <output id="uOut" class="mono"></output></span>
-            <input type="range" id="uMs" min="0" max="3" step="0.01"></label>
-          <label class="ctl" id="twCtl" hidden><span>Moon weight in twilight, par <output id="twOut" class="mono"></output></span>
-            <input type="range" id="twPar" min="0" max="1" step="0.01" value="1"></label>
-
-          <div class="lab-row two">
-            <label class="sel"><span class="sr-only">Site</span>
-              <select id="site"><option value="paranal">Cerro Paranal, Chile</option><option value="lisbon">Lisbon, Portugal</option></select>
-            </label>
-            <label class="sel"><span class="sr-only">Date</span><input type="date" id="date"></label>
-          </div>
-          <label class="ctl"><span>Time (UTC) <output id="tOut" class="mono"></output></span>
-            <input type="range" id="time" min="0" max="1435" step="5" value="300"></label>
-          <div class="lab-row btns">
-            <button class="mini" id="play">▶ Play the night</button>
-            <button class="mini" id="nowBtn">Now</button>
-            <button class="mini" id="obsBtn">Our FORS2 nights</button>
-          </div>
-          <div class="lab-row checks">
-            <label class="check"><input type="checkbox" id="vectors" checked> E-vectors</label>
-            <label class="check"><input type="checkbox" id="fields" checked> Observed fields</label>
-          </div>
-          <div class="legend" aria-hidden="true"><span class="mono" id="legMin">0</span><i></i><span class="mono" id="legMax">1</span></div>
-          <p class="readout mono" id="skyInfo">—</p>
-          <p class="readout mono" id="hoverInfo">Hover the sky to read values</p>
-        </div>
-      </div>
-
-      <div class="lab-below">
-        <div class="lab-chart reveal">
-          <div class="chart-head"><h3>Measured vs model</h3>
-            <div class="seg mini-seg" id="segChart" role="radiogroup" aria-label="Chart">
-              <button class="on" data-v="dop" role="radio" aria-checked="true">Polarisation</button>
-              <button data-v="int" role="radio" aria-checked="false">Intensity</button>
-            </div>
-          </div>
-          <p class="mono muted small" id="chartBand"></p>
-          <div id="dataChart" class="plot" style="height:340px"></div>
-          <p class="muted small">Points: FORS2 measurements at the VLT (Pereira et al. 2026, Appendix F). Filled: clear night; open: clouds; crosses: twilight. Intensity is counts per second, scaled to the model by one factor per band. Lines: the model of the selected step. The Rayleigh–Mie mixing presets in step 4 were fitted here to these data.</p>
-        </div>
-        <div class="lab-explain reveal" id="stepExplain"></div>
-      </div>
-
-      <div class="moon-card reveal" id="moonCard">
-        <canvas id="moonCanvas" width="220" height="220" aria-hidden="true"></canvas>
-        <div>
-          <p class="eyebrow mono">Tonight's Moon</p>
-          <h3 id="moonPhase">—</h3>
-          <dl class="moon-stats mono">
-            <div><dt>Illuminated</dt><dd id="moonIllum">—</dd></div>
-            <div><dt>Age</dt><dd id="moonAge">—</dd></div>
-            <div><dt>Next full moon</dt><dd id="moonFull">—</dd></div>
-          </dl>
-          <p class="muted small">Calculated live in your browser. Near full Moon, moonlight is bright enough to polarise the whole night sky, and to contaminate polarimetric observations of faint targets.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ───────── 04 · Physics book ───────── -->
-    <section id="physics" class="section">
-      <header class="section-head reveal">
-        <span class="mono idx">04</span>
-        <h2>Physics, step by step</h2>
-        <p class="lede" id="bookLede">From the basics to the demanding topics, with exercises, graphs and animations. This is the book I'm writing, one chapter at a time.</p>
-      </header>
-      <div class="book" id="book"><p class="muted">Loading chapters…</p></div>
-      <p class="more-link reveal"><a class="btn btn-ghost" href="physics.html">All themes &amp; exercises →</a></p>
-    </section>
-
     <!-- ───────── Contact ───────── -->
     <section id="contact" class="section contact">
       <header class="section-head reveal">
-        <span class="mono idx">05</span>
+        <span class="mono idx">02</span>
         <h2>Let's collaborate</h2>
         <p class="lede">Consulting, writing, coding or teaching: tell me about your project and we'll work out how I can help.</p>
       </header>
@@ -264,12 +116,6 @@
     </section>
   </main>
 
-  <!-- Poster viewer -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Poster" hidden>
-    <button class="reader-close" id="lightboxClose" aria-label="Close">✕</button>
-    <img id="lightboxImg" alt="">
-    <p class="mono" id="lightboxCap"></p>
-  </div>
 
   <footer class="footer mono">
     <span>© <span id="year"></span> Beatriz Pereira</span>
@@ -278,9 +124,6 @@
 
   <script src="assets/js/starfield.js"></script>
   <script src="assets/js/common.js"></script>
-  <script src="assets/vendor/astronomy.browser.min.js"></script>
-  <script src="assets/js/skylab.js"></script>
-  <script src="assets/js/moon.js"></script>
-  <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -12,7 +12,7 @@ Light scattered at a right angle can only keep the part of its field that is per
 
 ## A pattern that moves with the Sun
 
-Because the pattern is centred on the Sun, it sweeps across the sky during the day. At sunrise and sunset the band of strongest polarisation runs straight overhead, from north to south. **Try it in the [Sky Lab](index.html#lab)**: set the Sun's elevation to 0° and watch the band pass through the zenith.
+Because the pattern is centred on the Sun, it sweeps across the sky during the day. At sunrise and sunset the band of strongest polarisation runs straight overhead, from north to south.
 
 ## The real sky is messier
 

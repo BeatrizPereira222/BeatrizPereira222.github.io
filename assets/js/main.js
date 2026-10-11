@@ -96,7 +96,6 @@
         <a class="btn" href="${esc(f.overview)}">Read the overview</a>
         <a class="btn btn-ghost" href="https://doi.org/${esc(f.doi)}" target="_blank" rel="noopener">Paper (A&amp;A) ↗</a>
         <a class="btn btn-ghost" href="https://arxiv.org/abs/${esc(f.arxiv)}" target="_blank" rel="noopener">arXiv ↗</a>
-        <a class="btn btn-ghost" href="#lab">Try the models ↓</a>
       </div>`;
     $("#pubList").innerHTML = pub.items.map((it) => `
       <li>
