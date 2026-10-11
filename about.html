@@ -40,13 +40,23 @@
         <h2>About me</h2>
         <p class="lede">Where I've been, what I'm doing now, and what comes next.</p>
       </header>
-      <div class="sub-head reveal" style="margin-top:0;border-top:0;padding-top:0">
+      <div class="sub-head reveal" style="margin-top:0;border-top:0;padding-top:0"><h3>Education</h3></div>
+      <div class="edu-grid" id="education"><p class="muted">Loading…</p></div>
+
+      <div class="sub-head reveal">
         <h3>Timeline</h3>
         <div class="legend-pills mono" aria-hidden="true">
-          <span><i class="dot done"></i>Done</span><span><i class="dot now"></i>Now</span><span><i class="dot next"></i>Planned</span>
+          <span><i class="dot done"></i>Done</span><span><i class="dot now"></i>Now</span>
         </div>
       </div>
-      <div class="chrono" id="timeline"><p class="muted">Loading timeline…</p></div>
+      <p class="muted small reveal" style="margin:-6px 0 14px">Everything at once: each row is one part of my life, so things that happened at the same time appear side by side. Hover or tap a bar or a dot to read more about it.</p>
+      <div class="lanes-wrap reveal"><div class="lanes" id="lanes"></div></div>
+      <div class="lane-tip mono" id="laneTip" hidden></div>
+      <div class="lane-detail reveal" id="laneDetail"><p class="muted">Select a bar or a dot to see the details here.</p></div>
+      <div class="chrono" id="timeline" hidden></div>
+
+      <div class="sub-head reveal"><h3>What's next</h3></div>
+      <div class="next-grid" id="nextList"></div>
 
       <div class="sub-head reveal"><h3>Get in touch</h3></div>
       <div class="contact-links reveal" id="contactLinks"></div>

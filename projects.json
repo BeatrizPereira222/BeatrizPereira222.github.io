@@ -1,0 +1,49 @@
+[
+  {
+    "title": "Moonlit sky polarization patterns from Cerro Paranal",
+    "status": "done",
+    "note": "First-author paper · Astronomy & Astrophysics, 2026",
+    "type": "Publication",
+    "description": "Full-Moon sky polarisation measured with FORS2 at the VLT in four bands and compared with Rayleigh, Mie and multiple-scattering models.",
+    "tags": [
+      "Polarimetry",
+      "VLT / FORS2",
+      "Python",
+      "MCMC"
+    ]
+  },
+  {
+    "title": "PoET spectroscopy",
+    "status": "ongoing",
+    "note": "Collaboration with IA · Instituto de Astrofísica e Ciências do Espaço",
+    "type": "Research",
+    "description": "Working with the IA team on spectroscopic data from PoET, the Paranal solar ESPRESSO Telescope.",
+    "tags": [
+      "Spectroscopy",
+      "PoET",
+      "Data analysis",
+      "Python"
+    ]
+  },
+  {
+    "title": "Quiz App",
+    "status": "paused",
+    "type": "App",
+    "description": "A quiz app for practising physics and mathematics, built from the exercises I use in class.",
+    "tags": [
+      "App",
+      "Teaching"
+    ]
+  },
+  {
+    "title": "Physics, step by step (book)",
+    "status": "ongoing",
+    "type": "Book",
+    "description": "A physics book from the basics to demanding topics, with exercises, graphs and animations. Chapters are published on this site as I write them.",
+    "tags": [
+      "Physics",
+      "Teaching",
+      "Writing"
+    ]
+  }
+]
