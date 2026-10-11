@@ -3,8 +3,8 @@
     "slug": "moonlit-sky-paranal",
     "kind": "Paper overview",
     "date": "2026-10-11",
-    "title": "My paper: the moonlit sky over Paranal",
-    "summary": "What we measured with the VLT on two full-Moon nights, what the data show, and which scattering models explain them.",
+    "title": "Moonlit sky polarization patterns from Cerro Paranal",
+    "summary": "Why the moonlit sky matters for every polarimetric observation from the ground, what the standard Rayleigh model predicts, and what we measured with the VLT.",
     "tags": [
       "My research",
       "VLT / FORS2",
@@ -15,81 +15,96 @@
       "authors": "B. Pereira, S. González-Gaitán, A. M. Mourão et al.",
       "venue": "Astronomy & Astrophysics",
       "year": "2026",
-      "url": "https://doi.org/10.1051/0004-6361/202555617"
+      "url": "https://doi.org/10.1051/0004-6361/202555617",
+      "arxiv": "2510.27308"
     }
   },
   {
-    "slug": "why-is-the-sky-polarised",
+    "slug": "polarisation-electric-field",
     "kind": "Topic",
-    "date": "2026-10-08",
-    "title": "Why is the sky polarised?",
-    "summary": "The blue sky hides a pattern our eyes can't see but bees, cameras and polarimeters can. Here's where it comes from.",
+    "date": "2026-10-11",
+    "title": "Polarisation and the electric field",
+    "summary": "What polarisation actually is: how the electric field of a light wave oscillates, and the difference between linear, circular and elliptical light.",
+    "tags": [
+      "Basics",
+      "Electromagnetism"
+    ]
+  },
+  {
+    "slug": "stokes-parameters",
+    "kind": "Topic",
+    "date": "2026-10-11",
+    "title": "Stokes parameters",
+    "summary": "Four intensities that describe any beam of light, polarised or not, and the degree and angle of polarisation that follow from them.",
     "tags": [
       "Polarimetry",
-      "Scattering",
-      "Beginner"
+      "Basics"
     ]
   },
   {
-    "slug": "moonlight-polarisation",
+    "slug": "jones-calculus",
     "kind": "Topic",
-    "date": "2026-10-05",
-    "title": "The polarised night sky",
-    "summary": "Moonlight is scattered by the atmosphere too. Measuring its faint polarisation is the heart of my research.",
+    "date": "2026-10-11",
+    "title": "Jones calculus",
+    "summary": "Writing light as a vector and optical elements as matrices: a compact way to follow perfectly polarised light.",
     "tags": [
-      "Moonlight",
+      "Polarimetry",
+      "Maths"
+    ]
+  },
+  {
+    "slug": "mueller-formalism",
+    "kind": "Topic",
+    "date": "2026-10-11",
+    "title": "Mueller formalism",
+    "summary": "Four-by-four matrices that act on Stokes vectors: how polarisers, mirrors and scattering change light.",
+    "tags": [
+      "Polarimetry",
+      "Maths"
+    ]
+  },
+  {
+    "slug": "scattering",
+    "kind": "Topic",
+    "date": "2026-10-11",
+    "title": "Scattering",
+    "summary": "What happens when light meets a particle, why size matters, and the geometry of scattering in the night sky.",
+    "tags": [
+      "Scattering",
+      "Atmosphere"
+    ]
+  },
+  {
+    "slug": "rayleigh-model",
+    "kind": "Topic",
+    "date": "2026-10-11",
+    "title": "The Rayleigh model",
+    "summary": "Why the sky is blue and polarised: scattering by molecules much smaller than the wavelength of light.",
+    "tags": [
+      "Scattering",
+      "Rayleigh"
+    ]
+  },
+  {
+    "slug": "lorenz-mie-theory",
+    "kind": "Topic",
+    "date": "2026-10-11",
+    "title": "Lorenz–Mie theory",
+    "summary": "Scattering by particles as large as the wavelength: aerosols, dust and droplets, and why they brighten the sky near the Moon.",
+    "tags": [
+      "Scattering",
+      "Aerosols"
+    ]
+  },
+  {
+    "slug": "moon-polarimetric-properties",
+    "kind": "Topic",
+    "date": "2026-10-11",
+    "title": "The Moon's polarimetric properties",
+    "summary": "How moonlight is polarised when it leaves the Moon: phase angle, albedo and the lunar surface.",
+    "tags": [
+      "Moon",
       "Polarimetry"
-    ]
-  },
-  {
-    "slug": "rayleigh-1871",
-    "kind": "Paper overview",
-    "date": "2026-10-03",
-    "title": "Rayleigh (1871): the paper that explained the blue sky",
-    "summary": "How a 28-year-old Lord Rayleigh explained both the colour and the polarisation of skylight with tiny particles.",
-    "tags": [
-      "Classic paper",
-      "Scattering"
-    ],
-    "paper": {
-      "title": "On the light from the sky, its polarization and colour",
-      "authors": "J. W. Strutt (Lord Rayleigh)",
-      "venue": "Philosophical Magazine, vol. 41",
-      "year": "1871",
-      "url": "https://www.cambridge.org/core/books/scientific-papers/on-the-light-from-the-sky-its-polarization-and-colour/CB11663B07A3D46EE4CE6D05A1E09512"
-    }
-  },
-  {
-    "slug": "what-is-a-black-hole",
-    "kind": "Story",
-    "date": "2026-10-01",
-    "title": "What actually is a black hole?",
-    "summary": "Not a cosmic vacuum cleaner: a region where gravity wins every argument, even with light.",
-    "tags": [
-      "Black holes",
-      "Beginner"
-    ]
-  },
-  {
-    "slug": "why-stars-twinkle",
-    "kind": "Story",
-    "date": "2026-09-15",
-    "title": "Why do stars twinkle (and planets don't)?",
-    "summary": "Blame the atmosphere: turbulence, point sources and why astronomers love mountaintops.",
-    "tags": [
-      "Observing",
-      "Beginner"
-    ]
-  },
-  {
-    "slug": "we-are-made-of-star-stuff",
-    "kind": "Story",
-    "date": "2026-08-30",
-    "title": "We are made of star stuff, literally",
-    "summary": "The iron in your blood and the calcium in your bones were forged inside stars that died long ago.",
-    "tags": [
-      "Stars",
-      "Chemistry"
     ]
   }
 ]

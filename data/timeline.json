@@ -4,21 +4,30 @@
     "when": "2014 – 2015",
     "title": "Electrotechnical and Computer Engineering",
     "where": "Instituto Superior Técnico",
-    "text": "First year of the integrated master's, where I started programming in C and Assembly."
+    "text": "First year of the integrated master's, where I started programming in C and Assembly.",
+    "lane": "education",
+    "start": 2014.7,
+    "end": 2015.5
   },
   {
     "status": "done",
     "when": "2015 – 2022",
     "title": "Master's in Physics Engineering",
     "where": "Instituto Superior Técnico",
-    "text": "Final grade 16/20, with courses in machine learning, astrobiology and particle physics. C++, Python, MESA and Fortran."
+    "text": "Final grade 16/20, with courses in machine learning, astrobiology and particle physics. C++, Python, MESA and Fortran.",
+    "lane": "education",
+    "start": 2015.7,
+    "end": 2022.8
   },
   {
     "status": "done",
     "when": "2018",
     "title": "Summer internships",
     "where": "CENTRA · EDP Labelec",
-    "text": "Cosmology, Hořava's theory and black holes at CENTRA; calibration protocols in the high-voltage lab at EDP Labelec."
+    "text": "Cosmology, Hořava's theory and black holes at CENTRA; calibration protocols in the high-voltage lab at EDP Labelec.",
+    "lane": "work",
+    "start": 2018.5,
+    "end": 2018.75
   },
   {
     "status": "done",
@@ -29,14 +38,20 @@
     "link": {
       "label": "See the poster",
       "url": "research.html#publications"
-    }
+    },
+    "lane": "research",
+    "at": 2019.6,
+    "short": "Poster · XXIX ENAA"
   },
   {
     "status": "done",
     "when": "Jan 2021",
     "title": "Observing at ESO Paranal",
     "where": "VLT UT1 Antu · FORS2",
-    "text": "Polarimetric observations of blank fields in the moonlit sky, programme 106.21L9 (CRISP project)."
+    "text": "Polarimetric observations of blank fields in the moonlit sky, programme 106.21L9 (CRISP project).",
+    "lane": "research",
+    "at": 2021.07,
+    "short": "Observing at Paranal"
   },
   {
     "status": "done",
@@ -47,21 +62,53 @@
     "link": {
       "label": "See the poster",
       "url": "research.html#publications"
-    }
+    },
+    "lane": "research",
+    "start": 2021.0,
+    "end": 2022.0,
+    "short": "CRISP research grant"
   },
   {
     "status": "done",
     "when": "2022",
     "title": "Master's thesis and talks",
     "where": "IST – CENTRA · Lisbon · Politecnico di Milano",
-    "text": "\"Polarization patterns in the sky and their influence on astronomical observations\", graded 19/20. Presented at XXXI ENAA and at Astrophysical Polarimetry in the Time-Domain Era (Lecco)."
+    "text": "\"Polarization patterns in the sky and their influence on astronomical observations\", graded 19/20. Presented at XXXI ENAA and at Astrophysical Polarimetry in the Time-Domain Era (Lecco).",
+    "lane": "research",
+    "at": 2022.7,
+    "short": "Thesis and talks"
   },
   {
     "status": "done",
     "when": "2023 – 2024",
     "title": "Software engineer",
     "where": "N10GLED",
-    "text": "Software for a quantum key distribution (QKD) system for long-range secure communication. Python, Pypogs, ASCOM."
+    "text": "Software for a quantum key distribution (QKD) system for long-range secure communication. Python, Pypogs, ASCOM.",
+    "lane": "work",
+    "start": 2023.5,
+    "end": 2024.5,
+    "short": "Software engineer · N10GLED"
+  },
+  {
+    "status": "done",
+    "when": "2024 – 2025",
+    "title": "Collaboration with IA: PoET spectroscopy",
+    "where": "Instituto de Astrofísica e Ciências do Espaço",
+    "text": "Worked with the team at the Instituto de Astrofísica e Ciências do Espaço on spectroscopic data from PoET, the Paranal solar ESPRESSO Telescope, until 2025.",
+    "lane": "research",
+    "start": 2024.0,
+    "end": 2025.0,
+    "short": "IA collaboration · PoET"
+  },
+  {
+    "status": "now",
+    "when": "2025 – now",
+    "title": "Started the blog",
+    "text": "Explaining physics and astronomy in plain language, the start of the articles and chapters on this site.",
+    "lane": "teaching",
+    "start": 2025.3,
+    "end": "now",
+    "short": "Blog"
   },
   {
     "status": "done",
@@ -72,34 +119,49 @@
     "link": {
       "label": "Publications",
       "url": "research.html#publications"
-    }
+    },
+    "lane": "research",
+    "at": 2025.8,
+    "short": "Co-author paper (A&A)"
   },
   {
     "status": "done",
     "when": "2025 – 2026",
     "title": "Technical intern (FinOps)",
     "where": "Siemens Healthineers",
-    "text": "Cloud cost analysis, reporting automation and forecasting. FinOps Certified Practitioner, FOCUS Analyst and AI Value."
+    "text": "Cloud cost analysis, reporting automation and forecasting. FinOps Certified Practitioner, FOCUS Analyst and AI Value.",
+    "lane": "work",
+    "start": 2025.0,
+    "end": 2026.0,
+    "short": "FinOps intern"
   },
   {
     "status": "now",
     "when": "2026 – now",
     "title": "IT Service Designer / Developer",
     "where": "Siemens Healthineers",
-    "text": "Designing and developing IT services."
+    "text": "Designing and developing IT services.",
+    "lane": "work",
+    "start": 2026.0,
+    "end": "now",
+    "short": "IT Service Designer"
   },
   {
     "status": "now",
-    "when": "2023 – now",
+    "when": "2022 – now",
     "title": "Private physics teacher",
     "text": "One-to-one physics classes, and the exercises that became the start of my book.",
     "link": {
       "label": "Themes & exercises",
       "url": "physics.html"
-    }
+    },
+    "lane": "teaching",
+    "start": 2022.5,
+    "end": "now",
+    "short": "Physics teacher"
   },
   {
-    "status": "now",
+    "status": "done",
     "when": "2026",
     "title": "First-author paper published",
     "where": "Astronomy & Astrophysics",
@@ -107,13 +169,20 @@
     "link": {
       "label": "Read the overview",
       "url": "read.html?c=research&s=moonlit-sky-paranal"
-    }
+    },
+    "lane": "research",
+    "at": 2026.1,
+    "short": "First-author paper (A&A)"
   },
   {
     "status": "now",
     "when": "2026",
     "title": "Studying exoplanets",
-    "text": "Exoplanet detection, habitability and atmospheric characterisation, where polarimetry is becoming a powerful tool."
+    "text": "Exoplanet detection, habitability and atmospheric characterisation, where polarimetry is becoming a powerful tool.",
+    "lane": "research",
+    "start": 2026.0,
+    "end": "now",
+    "short": "Exoplanets"
   },
   {
     "status": "now",
@@ -123,24 +192,45 @@
     "link": {
       "label": "Read the chapters",
       "url": "physics.html"
-    }
+    },
+    "lane": "teaching",
+    "start": 2026.0,
+    "end": "now",
+    "short": "Writing the book"
   },
   {
     "status": "next",
     "when": "Next",
-    "title": "Book: Level 1 complete",
-    "text": "All Foundations chapters online, with exercises and solutions."
+    "title": "Book: Movement chapters complete",
+    "text": "All Movement chapters online, with exercises and solutions.",
+    "lane": "teaching",
+    "planned": true
   },
   {
     "status": "next",
     "when": "Next",
     "title": "Quiz App, first public version",
-    "text": "Practise physics and maths with the exercises from the book."
+    "text": "Practise physics and maths with the exercises from the book.",
+    "lane": "teaching",
+    "planned": true
   },
   {
     "status": "next",
     "when": "Later",
     "title": "Polarimetry of other worlds",
-    "text": "Bringing sky-polarization and scattering models to exoplanet atmospheres."
+    "text": "Bringing sky-polarization and scattering models to exoplanet atmospheres.",
+    "lane": "research",
+    "planned": true
+  },
+  {
+    "status": "done",
+    "when": "2022 – 2023",
+    "title": "Research collaboration at CENTRA",
+    "where": "CENTRA · Instituto Superior Técnico",
+    "text": "Continued the research on sky polarisation at CENTRA after the master's thesis.",
+    "lane": "research",
+    "start": 2022.8,
+    "end": 2023.9,
+    "short": "Research at CENTRA"
   }
 ]

@@ -19,7 +19,9 @@
       "title": "Polarization patterns in the sky and their influence on astronomical observations",
       "venue": "Instituto Superior Técnico · CENTRA" },
     { "kind": "Talk", "year": "2022", "role": "Talk",
-      "title": "Polarization sky patterns", "venue": "XXXI ENAA, Lisbon · Astrophysical Polarimetry in the Time-Domain Era, Lecco (Politecnico di Milano)" },
+      "title": "Polarization patterns in the sky", "venue": "Astrophysical Polarimetry in the Time-Domain Era · Politecnico di Milano, Lecco" },
+    { "kind": "Talk", "year": "2022", "role": "Talk",
+      "title": "Polarization sky patterns", "venue": "XXXII ENAA (Encontro Nacional de Astronomia e Astrofísica) · Ciências ULisboa, Lisbon" },
     { "kind": "Talk", "year": "2020", "role": "Talk · video",
       "title": "Polarization patterns in the sky: state of the art", "venue": "MEFT project workshop, IST – CENTRA",
       "url": "https://www.youtube.com/watch?v=-45nPP9BghQ" }

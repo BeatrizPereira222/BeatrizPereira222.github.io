@@ -1,35 +1,84 @@
 {
-  "intro": "From the basics to the demanding topics, with exercises, graphs and animations. This is the book I'm writing, published here one chapter at a time.",
+  "intro": "Physics from the ground up, one topic at a time: explanations, plots, animations and worked exercises. This is the book I'm writing, published here as the chapters are ready.",
   "levels": [
     {
-      "id": "foundations", "number": 1, "name": "Foundations",
-      "blurb": "The language of physics: quantities, motion and forces. No prior physics needed.",
+      "id": "movement",
+      "number": 1,
+      "name": "Movement",
+      "blurb": "How things move: position, velocity, acceleration, and motion in two dimensions.",
       "chapters": [
-        { "slug": "units-and-estimates", "title": "Measuring the Universe", "summary": "Units, orders of magnitude and the art of the estimate.", "status": "soon" },
-        { "slug": "motion-in-one-dimension", "title": "Motion in one dimension", "summary": "Position, velocity and acceleration, and the equations that link them.", "exercises": 3, "media": "plots" },
-        { "slug": "projectile-motion", "title": "Projectile motion", "summary": "Split the motion in two and a thrown ball becomes easy.", "exercises": 2, "media": "animation · plot" },
-        { "slug": "newtons-laws", "title": "Forces and Newton's laws", "summary": "Why things move the way they do.", "status": "soon" },
-        { "slug": "energy", "title": "Work and energy", "summary": "The quantity that is never lost.", "status": "soon" }
+        {
+          "slug": "motion-in-one-dimension",
+          "title": "Motion in one dimension",
+          "summary": "Rewsna on a straight road: position, velocity and acceleration, derivatives and integrals.",
+          "exercises": 5,
+          "media": "animation · plots"
+        },
+        {
+          "slug": "projectile-motion",
+          "title": "Projectile motion",
+          "summary": "Split the motion in two and a thrown ball becomes easy.",
+          "exercises": 2,
+          "media": "animation · plot"
+        }
       ]
     },
     {
-      "id": "intermediate", "number": 2, "name": "Intermediate",
-      "blurb": "Oscillations, waves and light. Some calculus helps.",
+      "id": "forces-energy",
+      "number": 2,
+      "name": "Forces and Energy",
+      "blurb": "Why things move the way they do, and the quantity that is never lost.",
+      "chapters": []
+    },
+    {
+      "id": "thermodynamics",
+      "number": 3,
+      "name": "Thermodynamics",
+      "blurb": "Heat, temperature and the laws that govern energy in motion.",
+      "chapters": []
+    },
+    {
+      "id": "electromagnetism",
+      "number": 4,
+      "name": "Electromagnetism",
+      "blurb": "Charges, fields and light as an electromagnetic wave.",
       "chapters": [
-        { "slug": "oscillations", "title": "Oscillations", "summary": "Springs, pendulums and simple harmonic motion.", "status": "soon" },
-        { "slug": "waves", "title": "Waves", "summary": "Travelling disturbances, interference and diffraction.", "status": "soon" },
-        { "slug": "polarisation-of-light", "title": "Polarisation of light", "summary": "The hidden direction of light, Malus's law and the Stokes parameters.", "exercises": 3, "media": "animation · plot" },
-        { "slug": "geometric-optics", "title": "Reflection and refraction", "summary": "Snell's law, Fresnel and Brewster.", "status": "soon" }
+        {
+          "slug": "polarisation-of-light",
+          "title": "Polarisation of light",
+          "summary": "The hidden direction of light, Malus's law and the Stokes parameters.",
+          "exercises": 3,
+          "media": "animation · plot"
+        }
       ]
     },
     {
-      "id": "advanced", "number": 3, "name": "Advanced",
-      "blurb": "Electromagnetism and scattering, the physics behind my research.",
+      "id": "quantum",
+      "number": 5,
+      "name": "Quantum Mechanics",
+      "blurb": "The strange rules of the very small.",
+      "chapters": []
+    },
+    {
+      "id": "particles",
+      "number": 6,
+      "name": "Particles",
+      "blurb": "What everything is made of.",
+      "chapters": []
+    },
+    {
+      "id": "sky",
+      "number": 7,
+      "name": "Exploring the Sky",
+      "blurb": "The physics behind what we see when we look up.",
       "chapters": [
-        { "slug": "maxwell", "title": "Maxwell's equations", "summary": "Electricity, magnetism and light as one theory.", "status": "soon" },
-        { "slug": "rayleigh-scattering", "title": "Rayleigh scattering", "summary": "Why the sky is blue and polarised, derived from a tiny oscillating dipole.", "exercises": 2, "media": "plots" },
-        { "slug": "mueller-matrices", "title": "Stokes vectors and Mueller matrices", "summary": "The algebra of polarised light.", "status": "soon" },
-        { "slug": "radiative-transfer", "title": "Radiative transfer", "summary": "Light travelling through an atmosphere, scattered many times.", "status": "soon" }
+        {
+          "slug": "rayleigh-scattering",
+          "title": "Rayleigh scattering",
+          "summary": "Why the sky is blue and polarised, derived from a tiny oscillating dipole.",
+          "exercises": 2,
+          "media": "plots"
+        }
       ]
     }
   ]

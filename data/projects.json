@@ -10,13 +10,24 @@
       "VLT / FORS2",
       "Python",
       "MCMC"
-    ],
-    "url": "https://doi.org/10.1051/0004-6361/202555617",
-    "linkLabel": "Read the paper"
+    ]
+  },
+  {
+    "title": "PoET spectroscopy",
+    "status": "ongoing",
+    "note": "Collaboration with IA · Instituto de Astrofísica e Ciências do Espaço",
+    "type": "Research",
+    "description": "Working with the IA team on spectroscopic data from PoET, the Paranal solar ESPRESSO Telescope.",
+    "tags": [
+      "Spectroscopy",
+      "PoET",
+      "Data analysis",
+      "Python"
+    ]
   },
   {
     "title": "Quiz App",
-    "status": "ongoing",
+    "status": "paused",
     "type": "App",
     "description": "A quiz app for practising physics and mathematics, built from the exercises I use in class.",
     "tags": [
@@ -33,8 +44,6 @@
       "Physics",
       "Teaching",
       "Writing"
-    ],
-    "url": "physics.html",
-    "linkLabel": "Read the chapters"
+    ]
   }
 ]

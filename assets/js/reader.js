@@ -75,6 +75,7 @@
   pager.innerHTML = card(prev, "prev") + card(next, "next");
 
   await renderPlots();
+  await renderSkySims();
   if (location.hash) { const t = document.getElementById(location.hash.slice(1)); if (t) t.scrollIntoView(); }
 
   // =====================================================================
@@ -93,13 +94,15 @@
     // 2. ::: containers (exercise, solution, note)
     const stack = []; let exN = 0;
     md = md.split("\n").map((line) => {
-      const m = line.match(/^:::\s*(exercise|solution|note|warning)?\s*(.*)$/);
+      const m = line.match(/^:::\s*(exercise|solution|note|warning|grid|card)?\s*(.*)$/);
       if (!m) return line;
       const [, kind, title] = m;
       if (!kind) { const k = stack.pop(); return k === "solution" ? "\n</details>\n" : k ? "\n</div>\n" : line; }
       stack.push(kind);
       if (kind === "exercise") { exN++; return `\n<div class="box exercise" id="exercise-${exN}"><p class="box-title mono">Exercise ${exN}${title ? " · " + esc(title) : ""}</p>\n`; }
       if (kind === "solution") return `\n<details class="solution"><summary>${esc(title || "Show solution")}</summary>\n`;
+      if (kind === "grid") return `\n<div class="card-grid">\n\n`;
+      if (kind === "card") return `\n<div class="box mcard${/\+/.test(title) ? " win" : ""}"><p class="box-title mono">${esc(title)}</p>\n\n`;
       return `\n<div class="box ${kind}"><p class="box-title mono">${esc(title || (kind === "note" ? "Note" : "Careful"))}</p>\n`;
     }).join("\n");
     while (stack.length) md += stack.pop() === "solution" ? "\n</details>\n" : "\n</div>\n";
@@ -110,12 +113,16 @@
       renderer: {
         code(code, lang) {
           if ((lang || "").trim() === "plot") return `<figure class="plot-fig"><div class="plot" data-spec="${esc(code)}"></div></figure>`;
+          if ((lang || "").trim() === "skysim") {
+            let cap = ""; try { cap = JSON.parse(code).caption || ""; } catch (_) {}
+            return `<figure class="skysim-fig"><div class="skysim" data-spec="${esc(code)}"></div>${cap ? `<figcaption>${esc(cap)}</figcaption>` : ""}</figure>`;
+          }
           return false;
         },
         image(href, title, text) {
           const src = /^(https?:|\/|data:)/.test(href) ? href : base + href;
           const img = `<img src="${esc(src)}" alt="${esc(text)}" loading="lazy">`;
-          const cap = title || "";
+          const cap = title ? unescapeHtml(title) : "";
           return `<figure>${img}${cap ? `<figcaption>${esc(cap)}</figcaption>` : ""}</figure>`;
         },
         heading(text, level, raw) {
@@ -142,12 +149,30 @@
   function unescapeHtml(s) { const t = document.createElement("textarea"); t.innerHTML = s; return t.value; }
 
   function paperCard(p) {
-    return `<div class="paper mono">
-      <span class="muted">Paper</span>
-      <strong>${esc(p.title)}</strong>
-      <span>${esc(p.authors)} · ${esc(p.venue)}${p.year ? " · " + esc(p.year) : ""}</span>
-      ${p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">Read the original ↗</a>` : ""}
+    return `<div class="paper-cta">
+      <div class="paper-cta-text">
+        <span class="mono muted">${esc(p.venue)}${p.year ? " · " + esc(p.year) : ""}</span>
+        <strong>${esc(p.title)}</strong>
+        <span class="muted">${esc(p.authors)}</span>
+      </div>
+      <div class="paper-cta-links">
+        ${p.url ? `<a class="btn" href="${esc(p.url)}" target="_blank" rel="noopener">Read the paper ↗</a>` : ""}
+        ${p.arxiv ? `<a class="btn btn-ghost" href="https://arxiv.org/abs/${esc(p.arxiv)}" target="_blank" rel="noopener">arXiv ↗</a>` : ""}
+      </div>
     </div>`;
+  }
+
+  // ---------- Sky polarisation simulators (script only downloaded if the page has one) ----------
+  async function renderSkySims() {
+    const boxes = $$(".skysim", main);
+    if (!boxes.length) return;
+    if (!window.SkySim) await new Promise((ok, no) => { const s = document.createElement("script"); s.src = "assets/js/skysim.js"; s.onload = ok; s.onerror = no; document.head.appendChild(s); })
+      .catch(() => boxes.forEach((b) => (b.textContent = "Couldn't load the sky simulator.")));
+    if (!window.SkySim) return;
+    for (const box of boxes) {
+      try { SkySim.mount(box, JSON.parse(box.dataset.spec), base); }
+      catch (e) { box.textContent = "Couldn't draw this simulation."; console.error(e); }
+    }
   }
 
   // ---------- Interactive plots (Plotly is only downloaded if the page has one) ----------
@@ -163,10 +188,10 @@
       paper_bgcolor: "rgba(0,0,0,0)", plot_bgcolor: "rgba(0,0,0,0)",
       font: { family: "Space Grotesk, system-ui, sans-serif", color: c("--text"), size: 13 },
       colorway: [c("--accent"), c("--accent-2"), c("--accent-3"), "#8fe3b0", "#ff9fb2"],
-      margin: { l: 56, r: 20, t: 36, b: 48 },
+      margin: { l: 56, r: 20, t: 48, b: 52 },
       xaxis: { gridcolor: "rgba(160,175,255,.12)", zerolinecolor: "rgba(160,175,255,.3)", linecolor: "rgba(160,175,255,.3)" },
       yaxis: { gridcolor: "rgba(160,175,255,.12)", zerolinecolor: "rgba(160,175,255,.3)", linecolor: "rgba(160,175,255,.3)" },
-      legend: { bgcolor: "rgba(0,0,0,0)", orientation: "h", y: -0.2 },
+      legend: { bgcolor: "rgba(0,0,0,0)", orientation: "h", x: 0, xanchor: "left", y: 1.02, yanchor: "bottom" },
       hoverlabel: { bgcolor: c("--panel-solid"), bordercolor: c("--line-strong"), font: { color: c("--text") } },
     };
     const merge = (a, b) => { for (const k in b) a[k] = b[k] && typeof b[k] === "object" && !Array.isArray(b[k]) ? merge(a[k] && typeof a[k] === "object" ? a[k] : {}, b[k]) : b[k]; return a; };
